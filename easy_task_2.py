@@ -1,0 +1,25 @@
+score = 0
+
+questions =[{"1.How many months have 28 days?\na) 2  b) 1  c) all of them  d) depends if its a leap year or not? ":"c"},
+            {"2.A farmer has 17 goats. All of them but 8 die. How many goats are alive?\na) 8  b) 9  c) 16  d) 7":"a"},
+            {"3.Which is heavier a ton of bricks or a ton of feathers?\na) A ton of bricks  b) A ton of feathers  c) They are both the same weight  d) It depends on the type of bricks":"c"},
+            {"4.Do you really want to go to the next question? (WARNING!)\na) yes  b)no  c) yes or no d)idk":"a"},
+            {"5.English or Spanish?\na) who ever first move is gay  \nb) program not gonna move FOREVER if you don`t move  \nc) you have to move for your upcoming life  \nd) just kidding you can move":"a"}]
+#i don`t think this program needs any comment to understand but the variable (question) is an dictionary which contain question & option as key and answer as value thats it.
+print("===Welcome to the Quiz=== \n")
+
+for q in questions:          
+    for k,v in q.items():
+        print(k)
+    
+        user_answer = input("Your answer (a/b/c/d): ").lower()
+    
+        if user_answer == v:
+              print(" Correct! \n")
+              score += 1
+        else:
+              print(" Wrong! Correct answer is ",v)
+
+print(" ===Quiz Finished!=== ")
+print(f"Your final score: {score} out of {len(questions)}")
+input("\nPress Enter to exit...")
